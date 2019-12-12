@@ -1,0 +1,28 @@
+{
+    "autoDocs": [
+        {
+            "formType": [
+                {
+                    "key": 100,
+                    "value": "Loan Number"
+                },
+                {
+                    "key": 101,
+                    "value": "First Name"
+                },
+                {
+                    "key": 102,
+                    "value": "Last Name"
+                },
+                {
+                    "key": 103,
+                    "value": "SSN"
+                },
+                {
+                    "key": 104,
+                    "value": "DOB"
+                }
+            ]
+        }
+    ]
+}

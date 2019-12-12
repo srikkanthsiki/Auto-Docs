@@ -1,0 +1,12 @@
+.main-title {
+    text-align: center;
+    position: absolute;
+    margin: 0px;
+    font-family: Helvetica;
+    font-size: 30px !important;
+    background-color: #008000;
+    color: white;
+    padding-top: 25px;
+    height: 55px;
+    width: 100%;
+}
