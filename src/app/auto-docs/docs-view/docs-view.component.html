@@ -1,1 +1,8 @@
-view
+<div class="container">
+    <div *ngIf="docLink">
+    <iframe class="doc" width="110%" height="650px"
+    [src]="sanitizer.bypassSecurityTrustResourceUrl(getUrl(docLink))" >
+</iframe>
+    </div>
+</div>
+

@@ -1,10 +1,10 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-4">
-            <app-docs-form></app-docs-form>
+            <app-docs-form (submitForm)="submitForm($event)"></app-docs-form>
         </div>
-        <div class="col-sm-8">
-            <app-docs-view></app-docs-view>
+        <div class="col-sm-8" *ngIf="docLink">
+            <app-docs-view [docLink]="docLink"></app-docs-view>
         </div>
     </div>
 </div>

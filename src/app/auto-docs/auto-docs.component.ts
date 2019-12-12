@@ -11,13 +11,14 @@ import { ApplicationService } from '../services/application.service';
   ]
 })
 export class AutoDocsComponent implements OnInit {
-
-  constructor(
-    
-  ) { }
+  docLink = null;
+  constructor() { }
 
   ngOnInit() {
-    
+  }
+
+  submitForm(link: any) {
+   this.docLink =  link;
   }
 
 }
