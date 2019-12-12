@@ -2,26 +2,22 @@
     <form (ngSubmit)="onSubmit()" #docForm="ngForm">
         <div class="form-group">
             <label for="power">Form Type</label>
-            <select class="form-control" id="formType" required [(ngModel)]="model.formType" name="formType">
-                <option [value]="null"  [disabled]='!model.formType'>Select</option>
+            <select class="form-control" id="formType" required name="formType" (change)="onSelection('formtypevalue')">
+                <option [value]="1"  disabled>Select</option>
                 <option *ngFor="let f of formTypes" [value]="f">{{f}}</option>
             </select>
         </div>
 
-        <div class="form-group">
+        <!-- <div class="form-group">
             <label for="exampleFormControlSelect2">Form Search</label>
             <input id="typeahead-basic" required [disabled]="!model.formType" name="formSearch" type="text" class="form-control" 
             [(ngModel)]="model.formSearch" [ngbTypeahead]="search" placeholder="Search Document Type"
             />
-        </div>
+        </div> -->
 
-        <div class="form-group">
-            <label for="exampleFormControlSelect2">Loan Number</label>
-            <input id="loan-num" type="text" required name="loanNumber" class="form-control" [(ngModel)]="model.loanNumber" placeholder="Search using loan number, SSN, Name etc."
-                [ngbTypeahead]="searchLoanNum" [disabled]="!model.formType && !model.formSearch"/>
-        </div>
+        
 
-        <div class="form-group">
+        <div class="form-group" *ngIf="flag">
             <label for="documents">Choose Documents</label>
             <ul class="list-group">
                 <li class="list-group-item">
@@ -35,6 +31,19 @@
                     <input type="checkbox" [(ngModel)]="item.isSelected" name="list_name" value="{{item.id}}" (change)="isAllSelected()" />  &nbsp; &nbsp;{{item.value}}
                 </li>
             </ul>
+        </div>
+
+        <!-- <div class="form-group">
+            <label for="exampleFormControlSelect2">Loan Number</label>
+            <input id="loan-num" type="text" required name="loanNumber" class="form-control" [(ngModel)]="model.loanNumber" placeholder="Search using loan number, SSN, Name etc."
+                [ngbTypeahead]="searchLoanNum" [disabled]="!model.formType && !model.formSearch"/>
+        </div> -->
+
+        <div class="form-group">
+            <label for="exampleFormControlSelect2">Loan Number</label>
+            <input id="typeahead-basic" required [disabled]="!model.formType" name="loanNumber" type="text" class="form-control" 
+            [(ngModel)]="model.formSearch" [ngbTypeahead]="searchLoanNum" placeholder="Search Loan Number"
+            />
         </div>
 
         <div class="form-group">

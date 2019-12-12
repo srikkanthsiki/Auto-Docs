@@ -22,6 +22,16 @@
                     "id": 104,
                     "option": "DOB"
                 }
+            ],
+            "doclink": [
+                {
+                    "id": 2,
+                    "value":"https://lending-transformers.s3.us-east-2.amazonaws.com/Res_ACP_Commitment_Ltr.docx"
+                },
+                {
+                    "id": 1,
+                    "value":"https://lending-transformers.s3.us-east-2.amazonaws.com/cre_commitment_letter_v4.docx"
+                }
             ]
         }
     ]
