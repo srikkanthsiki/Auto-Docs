@@ -3,24 +3,24 @@
         {
             "formType": [
                 {
-                    "key": 100,
-                    "value": "Loan Number"
+                    "id": 100,
+                    "option": "Loan Number"
                 },
                 {
-                    "key": 101,
-                    "value": "First Name"
+                    "id": 101,
+                    "option": "First Name"
                 },
                 {
-                    "key": 102,
-                    "value": "Last Name"
+                    "id": 102,
+                    "option": "Last Name"
                 },
                 {
-                    "key": 103,
-                    "value": "SSN"
+                    "id": 103,
+                    "option": "SSN"
                 },
                 {
-                    "key": 104,
-                    "value": "DOB"
+                    "id": 104,
+                    "option": "DOB"
                 }
             ]
         }

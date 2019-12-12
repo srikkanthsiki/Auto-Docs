@@ -11,6 +11,7 @@ import { HeaderComponent } from './common/header/header.component';
 import { AutoDocsComponent } from './auto-docs/auto-docs.component';
 import { DocsViewComponent } from './auto-docs/docs-view/docs-view.component';
 import { DocsFormComponent } from './auto-docs/docs-form/docs-form.component';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { DocsFormComponent } from './auto-docs/docs-form/docs-form.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     NgbModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

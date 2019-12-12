@@ -3,6 +3,7 @@ import { Observable } from 'rxjs';
 import { debounceTime, distinctUntilChanged, map } from 'rxjs/operators';
 
 
+import { ApplicationService } from 'src/app/services/application.service';
 
 @Component({
   selector: 'app-docs-form',
@@ -76,11 +77,15 @@ export class DocsFormComponent implements OnInit {
 
   onSubmit() {
     this.submitted = true;
-    
     console.log(this.model);
   }
 
   ngOnInit() {
+    // this.applicationService.getFormList().subscribe(data => {
+    //   // console.log(data);
+    //  // this.formList = data.autoDocs[0].formType;
+    //   console.log(this.formList);
+    // });
   }
 
 }
