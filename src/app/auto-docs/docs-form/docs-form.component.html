@@ -1,1 +1,43 @@
-<p>docs-form works!</p>
+<div class="container">
+    <form (ngSubmit)="onSubmit()" #docForm="ngForm">
+        <div class="form-group">
+            <label for="power">Form Type</label>
+            <select class="form-control" id="formType" required [(ngModel)]="model.formType" name="formType">
+                <option value="" disabled selected="selected">Select</option>
+                <option *ngFor="let f of formTypes" [value]="f">{{f}}</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="exampleFormControlSelect2">Form Search</label>
+            <input id="typeahead-basic" disabled="!model.formType" type="text" class="form-control" [(ngModel)]="model.formSearch" [ngbTypeahead]="search" placeholder="Search Document Type"
+            />
+        </div>
+
+        <div class="form-group">
+            <label for="exampleFormControlSelect2">Loan Number</label>
+            <input id="loan-num" type="text" class="form-control" [(ngModel)]="model.loanNumber" placeholder="Search using loan number, SSN, Name etc."
+                [ngbTypeahead]="searchLoanNum" />
+        </div>
+
+        <div class="form-group">
+            <label for="documents">Choose Documents</label>
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <input type="checkbox" [(ngModel)]="masterSelected" name="list_name" value="m1" (change)="checkUncheckAll()" /> &nbsp; &nbsp; &nbsp;
+                    <strong>Select/ Unselect Documents</strong>
+                </li>
+            </ul>
+            <ul class="list-group">
+                <li class="list-group-item" *ngFor="let item of checklist">
+                    <input type="checkbox" [(ngModel)]="item.isSelected" name="list_name" value="{{item.id}}" (change)="isAllSelected()" /> {{item.value}}
+                </li>
+            </ul>
+        </div>
+
+        <div class="form-group">
+            <input type="submit" value="Submit" /> 
+        </div>
+
+    </form>
+</div>
